@@ -12,6 +12,9 @@ type TaxRate {
   "The tax rate. For example, 0.05 for a 5% sales tax."
   rate: Float!
 
+  "If true, tax rate is expressed as a percentage of the total price including tax."
+  rateIsTaxInclusive: Boolean
+
   "An optional region (e.g., state) to limit where this tax is applied, in conjunction with `sourcing` field"
   region: String
 
@@ -38,6 +41,9 @@ input CreateTaxRateInput {
 
   "The tax rate. For example, 0.05 for a 5% sales tax."
   rate: Float!
+
+  "If true, tax rate is expressed as a percentage of the total price including tax."
+  rateIsTaxInclusive: Boolean
 
   "An optional region (e.g., state) to limit where this tax is applied based on destination address"
   region: String
@@ -77,6 +83,9 @@ input UpdateTaxRateInput {
 
   "The tax rate. For example, 0.05 for a 5% sales tax."
   rate: Float!
+
+  "If true, tax rate is expressed as a percentage of the total price including tax."
+  rateIsTaxInclusive: Boolean
 
   "An optional region (e.g., state) to limit where this tax is applied based on destination address"
   region: String

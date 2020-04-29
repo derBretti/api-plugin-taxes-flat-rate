@@ -13,6 +13,7 @@ export default async function updateTaxRate(context, input) {
     country,
     postal,
     rate,
+    rateIsTaxInclusive,
     region,
     shopId,
     sourcing: taxLocale,
@@ -28,7 +29,8 @@ export default async function updateTaxRate(context, input) {
     region,
     postal,
     taxCode,
-    rate
+    rate,
+    rateIsTaxInclusive
   };
   if (taxLocale) {
     updates.taxLocale = taxLocale;

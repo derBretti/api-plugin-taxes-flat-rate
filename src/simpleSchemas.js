@@ -33,5 +33,9 @@ export const TaxRates = new SimpleSchema({
     label: "Country",
     optional: true
   },
-  rate: Number
+  rate: Number,
+  rateIsTaxInclusive: {
+    type: Boolean,
+    optional: true
+  }
 });
